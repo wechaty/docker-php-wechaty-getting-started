@@ -8,6 +8,7 @@ export WECHATY_LOG="verbose"
 export WECHATY_PUPPET_SERVICE_NO_TLS_INSECURE_SERVER="false"
 
 docker run -tid \
+  --rm \
   --name wechaty_puppet_service_token_gateway \
   --privileged \
   --network=host \
@@ -17,3 +18,17 @@ docker run -tid \
   -e WECHATY_PUPPET_SERVICE_NO_TLS_INSECURE_SERVER \
   -e WECHATY_TOKEN \
   wechaty/wechaty
+
+export WECHATY_PUPPET_HOSTIE_TOKEN=$WECHATY_TOKEN
+echo "WECHATY_PUPPET_HOSTIE_TOKEN=$WECHATY_PUPPET_HOSTIE_TOKEN"
+export WECHATY_PUPPET_HOSTIE_ENDPOINT="localhost:8788"
+
+docker run -tid \
+  --rm \
+  --name php-wechaty \
+  -e WECHATY_LOG \
+  -e WECHATY_PUPPET_HOSTIE_TOKEN \
+  -e WECHATY_PUPPET_HOSTIE_ENDPOINT \
+  --volume="$(pwd)":/bot
+  phpwechaty/php-wechaty:v1
+  examples/ding-dong-bot.php
