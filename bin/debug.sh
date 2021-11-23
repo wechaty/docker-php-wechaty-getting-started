@@ -7,6 +7,7 @@ export WECHATY_PUPPET_HOSTIE_ENDPOINT="127.0.0.1:8788"
 docker run -ti \
   --rm \
   --name php-wechaty \
+  --network=host \
   -e WECHATY_LOG \
   -e WECHATY_PUPPET_HOSTIE_TOKEN \
   -e WECHATY_PUPPET_HOSTIE_ENDPOINT \
