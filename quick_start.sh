@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# docker pull wechaty/wechaty
+docker pull wechaty/wechaty
 
 export WECHATY_PUPPET="wechaty-puppet-wechat"
 export WECHATY_TOKEN=$(curl -s https://www.uuidgenerator.net/api/version4)
