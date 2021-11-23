@@ -1,9 +1,10 @@
 # DOCKER-PHP-WECHATY-GETTING-STARTED
 
-[![Powered by PHP Wechaty](https://img.shields.io/badge/Powered%20By-PHP-Wechaty-blue.svg)](https://github.com/wechaty/php-wechaty)
+[![Powered by Wechaty](https://img.shields.io/badge/Powered%20By-Wechaty-blue.svg)](https://github.com/wechaty/wechaty)
 [![Docker Pulls](https://img.shields.io/docker/pulls/phpwechaty/php-wechaty.svg?maxAge=2592000)](https://hub.docker.com/r/phpwechaty/php-wechaty/)
 [![Docker Stars](https://img.shields.io/docker/stars/phpwechaty/php-wechaty.svg?maxAge=2592000)](https://hub.docker.com/r/phpwechaty/php-wechaty/)
 [![Docker CI](https://github.com/wechaty/docker-php-wechaty-getting-started/actions/workflows/docker.yml/badge.svg)](https://github.com/wechaty/docker-wechaty-getting-started/actions/workflows/docker.yml)
+[![PHP Wechaty](https://img.shields.io/badge/wechaty-php--wechaty-blue.svg)](https://github.com/wechaty/php-wechaty)
 
 [![dockeri.co](http://dockeri.co/image/phpwechaty/php-wechaty)](https://hub.docker.com/r/phpwechaty/php-wechaty/)
 
