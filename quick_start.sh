@@ -36,3 +36,5 @@ docker run -ti \
   --volume="$(pwd)":/bot \
   phpwechaty/php-wechaty:v1 \
   examples/ding-dong-bot.php
+
+# docker stop wechaty_puppet_service_token_gateway
