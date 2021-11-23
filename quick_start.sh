@@ -6,7 +6,7 @@ export WECHATY_TOKEN=$(curl -s https://www.uuidgenerator.net/api/version4)
 echo "WECHATY_TOKEN=$WECHATY_TOKEN"
 export WECHATY_PUPPET_SERVER_PORT="8788"
 export WECHATY_LOG="verbose"
-export WECHATY_PUPPET_SERVICE_NO_TLS_INSECURE_SERVER="false"
+export WECHATY_PUPPET_SERVICE_NO_TLS_INSECURE_SERVER="true"
 
 docker run -tid \
   --rm \
