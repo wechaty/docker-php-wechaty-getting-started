@@ -30,6 +30,6 @@ docker run -tid \
   -e WECHATY_LOG \
   -e WECHATY_PUPPET_HOSTIE_TOKEN \
   -e WECHATY_PUPPET_HOSTIE_ENDPOINT \
-  --volume="$(pwd)":/bot
-  phpwechaty/php-wechaty:v1
+  --volume="$(pwd)":/bot \
+  phpwechaty/php-wechaty:v1 \
   examples/ding-dong-bot.php
