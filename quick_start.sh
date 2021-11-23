@@ -26,6 +26,8 @@ export WECHATY_PUPPET_HOSTIE_TOKEN=$WECHATY_TOKEN
 echo "WECHATY_PUPPET_HOSTIE_TOKEN=$WECHATY_PUPPET_HOSTIE_TOKEN"
 export WECHATY_PUPPET_HOSTIE_ENDPOINT="127.0.0.1:8788"
 
+docker pull phpwechaty/php-wechaty:v1
+
 docker run -ti \
   --rm \
   --name php-wechaty \
