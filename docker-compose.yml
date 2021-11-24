@@ -1,0 +1,22 @@
+version: '3.7'
+services:
+
+  wechaty:
+    image: wechaty/wechaty
+    container_name: wechaty_puppet_service_token_gateway
+    command:
+      - '--path.rootfs=/host'
+    network_mode: host
+    pid: host
+    restart: unless-stopped
+
+  php-wechaty:
+    image: phpwechaty/php-wechaty:v1
+    container_name: php-wechaty
+    command:
+      - '--path.rootfs=/host'
+    network_mode: host
+    pid: host
+    restart: unless-stopped
+    volumes:
+      - './examples:/bot'
