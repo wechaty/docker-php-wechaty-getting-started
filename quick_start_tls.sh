@@ -20,7 +20,7 @@ docker run -tid \
   -e WECHATY_TOKEN \
   wechaty/wechaty
 
-sleep 10s
+sleep 16s
 
 export WECHATY_PUPPET_SERVICE_TOKEN=$WECHATY_TOKEN
 echo "WECHATY_PUPPET_SERVICE_TOKEN=$WECHATY_PUPPET_SERVICE_TOKEN"
