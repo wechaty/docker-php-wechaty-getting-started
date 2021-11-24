@@ -22,9 +22,9 @@ docker run -tid \
 
 sleep 10s
 
-export WECHATY_PUPPET_HOSTIE_TOKEN=$WECHATY_TOKEN
-echo "WECHATY_PUPPET_HOSTIE_TOKEN=$WECHATY_PUPPET_HOSTIE_TOKEN"
-export WECHATY_PUPPET_HOSTIE_ENDPOINT="127.0.0.1:8788"
+export WECHATY_PUPPET_SERVICE_TOKEN=$WECHATY_TOKEN
+echo "WECHATY_PUPPET_SERVICE_TOKEN=$WECHATY_PUPPET_SERVICE_TOKEN"
+export WECHATY_PUPPET_SERVICE_ENDPOINT="127.0.0.1:8788"
 
 docker pull phpwechaty/php-wechaty:v1
 
@@ -33,8 +33,8 @@ docker run -ti \
   --name php-wechaty \
   --network=host \
   -e WECHATY_LOG \
-  -e WECHATY_PUPPET_HOSTIE_TOKEN \
-  -e WECHATY_PUPPET_HOSTIE_ENDPOINT \
+  -e WECHATY_PUPPET_SERVICE_TOKEN \
+  -e WECHATY_PUPPET_SERVICE_ENDPOINT \
   --volume="$(pwd)":/bot \
   phpwechaty/php-wechaty:v1 \
   examples/ding-dong-bot.php
