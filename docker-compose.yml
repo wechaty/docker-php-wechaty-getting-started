@@ -17,6 +17,8 @@ services:
       - '--path.rootfs=/host'
     network_mode: host
     pid: host
+    depends_on:
+      - wechaty
     restart: unless-stopped
     volumes:
       - './examples:/bot'
