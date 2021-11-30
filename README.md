@@ -48,12 +48,12 @@ Source code at `examples/ding-dong-bot.php`
 ./docker-compse-start.sh
 ```
 
-#### 3. Run PHP Example with docker-compose and tls
+#### 4. Run PHP Example with docker-compose and tls
 
 Source code at `examples/ding-dong-bot.php`
 
 ```shell
-./docker-compse-start.sh
+./docker-compse-start-tls.sh
 ```
 
 #### New environment variables
