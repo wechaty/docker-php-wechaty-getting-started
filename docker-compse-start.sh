@@ -13,3 +13,5 @@ export WECHATY_PUPPET_SERVICE_NO_TLS_INSECURE_CLIENT="true"
 
 docker-compose up
 # docker-compose down
+# docker-compose up wechaty
+# docker-compose up php-wechaty
