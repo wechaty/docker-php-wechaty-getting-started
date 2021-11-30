@@ -32,12 +32,20 @@ Source code at `examples/ding-dong-bot.php`
 ./quick_start.sh
 ```
 
-#### 1. Run PHP Example with tls
+#### 2. Run PHP Example with tls
 
 Source code at `examples/ding-dong-bot.php`
 
 ```shell
 ./quick_start_tls.sh
+```
+
+#### 2. Run PHP Example with docker-compose
+
+Source code at `examples/ding-dong-bot.php`
+
+```shell
+./docker-compse-start.sh
 ```
 
 #### New environment variables
