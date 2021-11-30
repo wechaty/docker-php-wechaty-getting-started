@@ -20,9 +20,11 @@ services:
     depends_on:
       - wechaty
     restart: always
+    command:
+      - 'examples/ding-dong-bot.php'
     environment:
       - WECHATY_PUPPET_SERVICE_TOKEN
       - WECHATY_PUPPET_SERVICE_ENDPOINT
       - WECHATY_PUPPET_SERVICE_NO_TLS_INSECURE_CLIENT
     volumes:
-      - './examples:/bot'
+      - './:/bot'
