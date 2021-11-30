@@ -4,7 +4,6 @@ services:
   wechaty:
     image: wechaty/wechaty
     container_name: wechaty_puppet_service_token_gateway
-    network_mode: host
     environment:
       - WECHATY_PUPPET
       - WECHATY_TOKEN
@@ -16,7 +15,6 @@ services:
   php-wechaty:
     image: phpwechaty/php-wechaty:v1
     container_name: php-wechaty
-    network_mode: host
     depends_on:
       - wechaty
     restart: always
