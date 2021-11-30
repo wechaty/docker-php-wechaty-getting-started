@@ -4,21 +4,25 @@ services:
   wechaty:
     image: wechaty/wechaty
     container_name: wechaty_puppet_service_token_gateway
-    command:
-      - '--path.rootfs=/host'
     network_mode: host
-    pid: host
-    restart: unless-stopped
+    environment:
+      - WECHATY_PUPPET
+      - WECHATY_TOKEN
+      - WECHATY_PUPPET_SERVER_PORT
+      - WECHATY_LOG
+      - WECHATY_PUPPET_SERVICE_NO_TLS_INSECURE_SERVER
+    restart: always
 
   php-wechaty:
     image: phpwechaty/php-wechaty:v1
     container_name: php-wechaty
-    command:
-      - '--path.rootfs=/host'
     network_mode: host
-    pid: host
     depends_on:
       - wechaty
-    restart: unless-stopped
+    restart: always
+    environment:
+      - WECHATY_PUPPET_SERVICE_TOKEN
+      - WECHATY_PUPPET_SERVICE_ENDPOINT
+      - WECHATY_PUPPET_SERVICE_NO_TLS_INSECURE_CLIENT
     volumes:
       - './examples:/bot'
