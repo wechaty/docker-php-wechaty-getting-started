@@ -40,7 +40,15 @@ Source code at `examples/ding-dong-bot.php`
 ./quick_start_tls.sh
 ```
 
-#### 2. Run PHP Example with docker-compose
+#### 3. Run PHP Example with docker-compose and no tls
+
+Source code at `examples/ding-dong-bot.php`
+
+```shell
+./docker-compse-start.sh
+```
+
+#### 3. Run PHP Example with docker-compose and tls
 
 Source code at `examples/ding-dong-bot.php`
 
