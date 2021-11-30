@@ -12,3 +12,4 @@ export WECHATY_PUPPET_SERVICE_ENDPOINT="127.0.0.1:8788"
 export WECHATY_PUPPET_SERVICE_NO_TLS_INSECURE_CLIENT="true"
 
 docker-compose up
+# docker-compose down
