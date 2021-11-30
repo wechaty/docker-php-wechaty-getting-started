@@ -21,7 +21,8 @@ services:
     image: phpwechaty/php-wechaty:v1
     container_name: php-wechaty
     depends_on:
-      - wechaty
+      wechaty:
+        condition: service_healthy
     restart: always
     command:
       - 'examples/ding-dong-bot.php'
