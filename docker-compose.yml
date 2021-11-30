@@ -11,6 +11,11 @@ services:
       - WECHATY_LOG
       - WECHATY_PUPPET_SERVICE_NO_TLS_INSECURE_SERVER
     restart: always
+    healthcheck:
+      test: ["CMD","curl","-f","http://localhost:${WECHATY_PUPPET_SERVER_PORT}"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
 
   php-wechaty:
     image: phpwechaty/php-wechaty:v1
@@ -18,7 +23,15 @@ services:
     depends_on:
       - wechaty
     restart: always
-    command:
+    command: >
+      /bin/sh -c"
+        echo Waiting for wechaty service start...;
+        while ! nc -z wechaty ${WECHATY_PUPPET_SERVICE_TOKEN};
+        do
+          sleep 1;
+        done;
+        echo Connected!;
+      "
       - 'examples/ding-dong-bot.php'
     environment:
       - WECHATY_PUPPET_SERVICE_TOKEN
