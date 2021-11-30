@@ -23,15 +23,7 @@ services:
     depends_on:
       - wechaty
     restart: always
-    command: >
-      /bin/sh -c"
-        echo Waiting for wechaty service start...;
-        while ! nc -z wechaty ${WECHATY_PUPPET_SERVICE_TOKEN};
-        do
-          sleep 1;
-        done;
-        echo Connected!;
-      "
+    command:
       - 'examples/ding-dong-bot.php'
     environment:
       - WECHATY_PUPPET_SERVICE_TOKEN
