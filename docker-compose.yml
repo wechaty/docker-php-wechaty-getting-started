@@ -19,7 +19,7 @@ services:
       - wechaty
     restart: always
     command:
-      - 'examples/ding-dong-bot.php'
+      - 'bash'
     environment:
       - WECHATY_PUPPET_SERVICE_TOKEN
       - WECHATY_PUPPET_SERVICE_ENDPOINT
